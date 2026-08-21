@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#16233A" />
+
+<title>Advocacia Almeida — Direito do Trabalho e Direito Previdenciário</title>
+<meta name="description" content="Advocacia Almeida: 8 anos de atuação em Direito do Trabalho e Direito Previdenciário. Defesa técnica para trabalhadores e empresas, com linguagem clara e atendimento digital." />
+<meta name="author" content="Advocacia Almeida" />
+<meta name="robots" content="index, follow" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Advocacia Almeida" />
+<meta property="og:title" content="Advocacia Almeida — Direito do Trabalho e Direito Previdenciário" />
+<meta property="og:description" content="Segurança jurídica para o seu presente e seu amanhã. Defesa técnica em questões trabalhistas e previdenciárias." />
+<meta property="og:image" content="assets/MU-logo.png" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="canonical" href="./" />
+<link rel="icon" type="image/png" href="assets/MU-logo.png" />
+<link rel="apple-touch-icon" href="assets/MU-logo.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" />
+
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      var sys = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', saved || sys);
+    } catch (e) {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  })();
+</script>
+
+<style>
+/* ---------- Tokens de tema ---------- */
+[data-theme="light"] {
+  --cor-fundo: #FAF9F6;
+  --cor-fundo-sec: #F0EDE7;
+  --cor-superficie: #FFFFFF;
+  --cor-texto: #14181F;
+  --cor-texto-sec: #59616F;
+  --cor-primaria: #16233A;
+  --cor-primaria-hover: #0D1626;
+  --cor-primaria-texto: #FFFFFF;
+  --cor-acento: #C8A24A;
+  --cor-acento-texto: #8A6B23;
+  --cor-musgo: #4A5D46;
+  --cor-borda: rgba(0, 0, 0, 0.10);
+  --cor-borda-forte: rgba(0, 0, 0, 0.16);
+  --cor-sombra: rgba(20, 24, 31, 0.10);
+  --cor-sombra-forte: rgba(20, 24, 31, 0.16);
+  --cor-header: rgba(250, 249, 246, 0.86);
+  --hero-overlay-extra: 0;
+}
+
+[data-theme="dark"] {
+  --cor-fundo: #0D1420;
+  --cor-fundo-sec: #131C2B;
+  --cor-superficie: #17212F;
+  --cor-texto: #ECEAE4;
+  --cor-texto-sec: #9AA3B2;
+  --cor-primaria: #D8B978;
+  --cor-primaria-hover: #E8CD97;
+  --cor-primaria-texto: #101828;
+  --cor-acento: #D8B978;
+  --cor-acento-texto: #E0C48A;
+  --cor-musgo: #7E9377;
+  --cor-borda: rgba(255, 255, 255, 0.10);
+  --cor-borda-forte: rgba(255, 255, 255, 0.18);
+  --cor-sombra: rgba(0, 0, 0, 0.40);
+  --cor-sombra-forte: rgba(0, 0, 0, 0.55);
+  --cor-header: rgba(13, 20, 32, 0.88);
+  --hero-overlay-extra: 0.18;
+}
+
+:root {
+  --whats: #25D366;
+  --whats-hover: #1EB855;
+  --hero-fundo: #101B2B;
+  --hero-fundo-2: #16233A;
+  --hero-texto: #F2EFE9;
+  --hero-texto-sec: #BDC5D1;
+  --hero-acento: #D8B978;
+
+  --fonte-titulo: "Cormorant Garamond", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --fonte-corpo: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --container: 1180px;
+  --pad-lateral: 20px;
+  --esp-secao: 64px;
+  --gap: 24px;
+  --raio: 4px;
+  --raio-sm: 3px;
+  --altura-header: 68px;
+}
+
+@media (min-width: 768px) {
+  :root { --pad-lateral: 40px; --esp-secao: 88px; --altura-header: 76px; }
+}
+@media (min-width: 1025px) {
+  :root { --pad-lateral: 64px; --esp-secao: 104px; }
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body, h1, h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+button, input, textarea, select { font: inherit; color: inherit; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+*, *::before, *::after {
+  transition: color .3s ease, background-color .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+@media (min-width: 768px) { body { font-size: 1.0625rem; } }
+
+body.menu-aberto { overflow: hidden; }
+
+/* ---------- Acessibilidade ---------- */
+:focus-visible {
+  outline: 3px solid var(--cor-acento);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.pular-link {
+  position: absolute; left: 50%; top: 0; transform: translate(-50%, -140%);
+  z-index: 200; background: var(--cor-primaria); color: var(--cor-primaria-texto);
+  padding: 12px 22px; border-radius: 0 0 var(--raio) var(--raio);
+  font-size: .9rem; font-weight: 600; text-decoration: none; transition: transform .2s ease;
+}
+.pular-link:focus { transform: translate(-50%, 0); }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  width: 100%; max-width: var(--container); margin-inline: auto;
+  padding-inline: var(--pad-lateral);
+}
+.secao { padding-block: var(--esp-secao); scroll-margin-top: calc(var(--altura-header) + 12px); }
+.secao--alt { background: var(--cor-fundo-sec); }
+
+/* ---------- Tipografia ---------- */
+h1, h2, h3, h4 { font-family: var(--fonte-titulo); font-weight: 600; line-height: 1.15; color: var(--cor-texto); }
+h1 { font-size: clamp(2.15rem, 6.2vw, 3.85rem); line-height: 1.06; letter-spacing: -0.015em; font-weight: 600; }
+h2 { font-size: clamp(1.8rem, 4.4vw, 2.85rem); letter-spacing: -0.01em; }
+h3 { font-size: clamp(1.2rem, 2.4vw, 1.45rem); line-height: 1.25; }
+h4 { font-size: 1.08rem; line-height: 1.3; }
+p { color: var(--cor-texto-sec); }
+a { color: inherit; }
+
+.sobrelinha {
+  font-family: var(--fonte-corpo);
+  font-size: .72rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--cor-acento-texto); margin-bottom: 14px;
+}
+.intro-secao {
+  max-width: 62ch; font-size: 1.05rem; margin-top: 18px; color: var(--cor-texto-sec);
+}
+.cabecalho-secao { margin-bottom: 44px; }
+@media (min-width: 768px) { .cabecalho-secao { margin-bottom: 56px; } }
+
+/* ---------- Elemento assinatura: "viga da balança" ---------- */
+.viga { display: block; width: 116px; height: 12px; color: var(--cor-acento); margin-top: 18px; }
+.viga--centro { margin-inline: auto; }
+.viga--hero { color: var(--hero-acento); }
+
+/* ---------- Botões ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 48px; padding: 13px 28px;
+  font-family: var(--fonte-corpo); font-size: .95rem; font-weight: 600; letter-spacing: .02em;
+  text-decoration: none; border: 1px solid transparent; border-radius: var(--raio-sm);
+  cursor: pointer; transition: background-color .25s ease, color .25s ease, border-color .25s ease, transform .18s ease, box-shadow .25s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+
+.btn--primario { background: var(--cor-primaria); color: var(--cor-primaria-texto); box-shadow: 0 6px 18px var(--cor-sombra); }
+.btn--primario:hover { background: var(--cor-primaria-hover); box-shadow: 0 10px 26px var(--cor-sombra-forte); }
+
+.btn--ouro { background: var(--hero-acento); color: #101828; box-shadow: 0 6px 20px rgba(0, 0, 0, .30); }
+.btn--ouro:hover { background: #E8CD97; }
+
+.btn--fantasma-claro { background: transparent; color: var(--hero-texto); border-color: rgba(242, 239, 233, .38); }
+.btn--fantasma-claro:hover { border-color: var(--hero-acento); color: var(--hero-acento); }
+
+.btn--whats {
+  display: inline-flex; align-items: center; gap: 9px;
+  min-height: 48px; padding: 0 26px;
+  background: var(--whats); color: #064e28; border: none; border-radius: 8px;
+  font-family: var(--fonte-corpo); font-size: .95rem; font-weight: 700;
+  text-decoration: none; cursor: pointer; letter-spacing: .01em;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, .28);
+  transition: background .25s ease, transform .18s ease, box-shadow .25s ease;
+}
+.btn--whats:hover { background: var(--whats-hover); transform: translateY(-2px); box-shadow: 0 8px 26px rgba(37, 211, 102, .38); }
+.btn--whats:active { transform: translateY(0); }
+.btn--whats svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+.btn--bloco { width: 100%; }
+@media (min-width: 480px) { .btn--bloco { width: auto; } }
+
+/* ---------- Header ---------- */
+.cabecalho {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--cor-header);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--cor-borda);
+}
+.cabecalho__inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  min-height: var(--altura-header);
+}
+.marca {
+  display: flex; align-items: center; gap: 11px; min-height: 44px;
+  text-decoration: none; flex-shrink: 0;
+}
+.marca__placa {
+  display: grid; place-items: center; overflow: hidden;
+  background: transparent; border-radius: var(--raio-sm); padding: 3px;
+}
+.marca__img { width: 34px; height: 35px; object-fit: contain; }
+.marca__txt { display: flex; flex-direction: column; line-height: 1.05; }
+.marca__nome {
+  font-family: var(--fonte-titulo); font-size: 1.22rem; font-weight: 700;
+  letter-spacing: .06em; text-transform: uppercase; color: var(--cor-texto);
+}
+.marca__sub {
+  font-size: .58rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--cor-acento-texto); margin-top: 2px;
+}
+
+.nav-desktop { display: none; }
+@media (min-width: 1025px) {
+  .nav-desktop { display: flex; align-items: center; gap: 4px; }
+}
+.nav-link {
+  position: relative; display: inline-flex; align-items: center;
+  min-height: 44px; padding: 0 14px; white-space: nowrap;
+  font-size: .92rem; font-weight: 500; color: var(--cor-texto-sec); text-decoration: none;
+  transition: color .22s ease;
+}
+.nav-link::after {
+  content: ""; position: absolute; left: 14px; right: 14px; bottom: 12px; height: 1px;
+  background: var(--cor-acento); transform: scaleX(0); transform-origin: left; transition: transform .28s ease;
+}
+.nav-link:hover, .nav-link:focus-visible { color: var(--cor-texto); }
+.nav-link:hover::after, .nav-link:focus-visible::after { transform: scaleX(1); }
+
+.controles { display: flex; align-items: center; gap: 6px; }
+
+.cabecalho__cta {
+  display: none; align-items: center; gap: 8px;
+  min-height: 44px; padding: 0 20px;
+  background: var(--whats); color: #064e28;
+  border: none; border-radius: 999px;
+  font-family: var(--fonte-corpo); font-size: .88rem; font-weight: 700;
+  text-decoration: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, .25);
+  transition: background .25s ease, transform .18s ease, box-shadow .25s ease;
+}
+.cabecalho__cta:hover {
+  background: var(--whats-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, .35);
+}
+.cabecalho__cta:active { transform: translateY(0); }
+.cabecalho__cta svg { width: 18px; height: 18px; flex-shrink: 0; }
+@media (min-width: 1025px) { .cabecalho__cta { display: inline-flex; margin-left: 6px; } }
+
+.toggle-tema {
+  display: grid; place-items: center; min-width: 44px; min-height: 44px;
+  background: none; border: none; border-radius: 50%; cursor: pointer;
+  color: var(--cor-texto); padding: 8px;
+}
+.toggle-tema:hover { background: var(--cor-fundo-sec); color: var(--cor-acento-texto); }
+.toggle-tema svg { width: 20px; height: 20px; }
+
+.btn-menu {
+  display: grid; place-items: center; min-width: 44px; min-height: 44px;
+  background: none; border: 1px solid var(--cor-borda); border-radius: var(--raio-sm);
+  cursor: pointer; color: var(--cor-texto);
+}
+.btn-menu:hover { border-color: var(--cor-borda-forte); }
+.btn-menu svg { width: 20px; height: 20px; }
+@media (min-width: 1025px) { .btn-menu { display: none; } }
+
+/* ---------- Menu mobile ---------- */
+.menu-mobile {
+  position: fixed; inset: var(--altura-header) 0 0 0; z-index: 99;
+  background: var(--cor-fundo);
+  border-top: 1px solid var(--cor-borda);
+  padding: 22px var(--pad-lateral) 40px;
+  overflow-y: auto;
+  animation: entrada-menu .26s ease both;
+}
+@keyframes entrada-menu { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+.menu-mobile__lista { display: flex; flex-direction: column; }
+.menu-mobile__link {
+  display: flex; align-items: center; min-height: 56px;
+  font-family: var(--fonte-titulo); font-size: 1.4rem; font-weight: 600;
+  color: var(--cor-texto); text-decoration: none;
+  border-bottom: 1px solid var(--cor-borda);
+}
+.menu-mobile__link:hover { color: var(--cor-acento-texto); }
+.menu-mobile__cta { margin-top: 28px; }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative; overflow: hidden;
+  background: linear-gradient(160deg, var(--hero-fundo-2) 0%, var(--hero-fundo) 62%, #0A121E 100%);
+  color: var(--hero-texto);
+  min-height: 80vh;
+  display: flex; align-items: center;
+  scroll-margin-top: var(--altura-header);
+}
+.hero__bg-img {
+  position: absolute; inset: 0; z-index: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  opacity: 0.12; pointer-events: none;
+}
+.hero::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: #000; opacity: var(--hero-overlay-extra); z-index: 1;
+}
+.hero__inner {
+  position: relative; z-index: 3;
+  width: 100%; max-width: 720px;
+  padding-block: 72px 80px;
+}
+@media (min-width: 768px) { .hero__inner { padding-block: 96px 108px; } }
+@media (min-width: 1025px) { .hero__inner { padding-block: 112px 128px; } }
+.hero h1 { color: var(--hero-texto); max-width: 16ch; }
+.hero .sobrelinha { color: var(--hero-acento); }
+.hero__sub {
+  color: var(--hero-texto-sec); font-size: 1.05rem; max-width: 56ch; margin-top: 22px;
+}
+@media (min-width: 768px) { .hero__sub { font-size: 1.14rem; } }
+.hero__acoes { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+
+/* ---------- Beams ---------- */
+.beams {
+  position: absolute; inset: 0; overflow: hidden;
+  pointer-events: none; z-index: 2;
+}
+.beam {
+  position: absolute; top: -60%; height: 220%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(216, 185, 120, 0.03) 25%,
+    rgba(216, 185, 120, 0.18) 50%,
+    rgba(216, 185, 120, 0.03) 75%,
+    transparent 100%
+  );
+  filter: blur(2px);
+  opacity: 0;
+  animation: beam-glow ease-in-out infinite;
+}
+@keyframes beam-glow {
+  0%, 100% { opacity: 0; }
+  40% { opacity: 0.8; }
+  60% { opacity: 0.8; }
+}
+
+/* ---------- Faixa de credenciais (estática) ---------- */
+.credenciais-faixa {
+  background: var(--hero-fundo);
+  padding: 20px var(--pad-lateral);
+  border-bottom: 1px solid rgba(216, 185, 120, .12);
+}
+.credenciais-faixa__inner {
+  max-width: var(--container); margin-inline: auto;
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  gap: 12px 40px;
+}
+.credencial-item {
+  display: flex; align-items: center; gap: 9px;
+  font-size: .84rem; font-weight: 600; letter-spacing: .04em;
+  color: var(--hero-texto-sec);
+  white-space: nowrap;
+}
+.credencial-item svg {
+  width: 17px; height: 17px; color: var(--hero-acento); flex-shrink: 0;
+}
+
+/* ---------- Cards ---------- */
+.grade { display: grid; gap: var(--gap); }
+.grade--2 { grid-template-columns: 1fr; }
+.grade--3 { grid-template-columns: 1fr; }
+@media (min-width: 768px) { .grade--3 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1025px) {
+  .grade--2 { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .grade--3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+.card {
+  position: relative; background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda); border-radius: var(--raio);
+  padding: 28px 24px; height: 100%; overflow: hidden;
+  transition: transform .4s cubic-bezier(.22,.61,.36,1), border-color .3s ease, box-shadow .4s ease;
+}
+@media (min-width: 768px) { .card { padding: 34px 30px; } }
+
+.card::before {
+  content: ""; position: absolute; top: -1px; left: -1px; right: -1px; height: 2px;
+  background: var(--cor-acento); border-radius: var(--raio) var(--raio) 0 0;
+  transform: scaleX(0); transform-origin: left; transition: transform .35s ease;
+}
+.card::after {
+  content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(200, 162, 74, 0.04) 42%,
+    rgba(200, 162, 74, 0.10) 50%,
+    rgba(200, 162, 74, 0.04) 58%,
+    transparent 100%
+  );
+  transform: rotate(25deg) translateX(-120%);
+  transition: transform .7s ease;
+  pointer-events: none;
+}
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--cor-acento);
+  box-shadow: 0 22px 50px var(--cor-sombra), 0 0 40px rgba(200, 162, 74, 0.06);
+}
+.card:hover::before { transform: scaleX(1); }
+.card:hover::after { transform: rotate(25deg) translateX(60%); }
+
+.card__icone {
+  display: grid; place-items: center; width: 56px; height: 56px; margin-bottom: 22px;
+  border: 1px solid var(--cor-borda); border-radius: 12px;
+  background: linear-gradient(135deg, var(--cor-fundo-sec), var(--cor-superficie));
+  color: var(--cor-acento-texto);
+  transition: transform .4s ease, background .35s ease, border-color .35s ease, color .35s ease;
+}
+.card__icone svg { width: 26px; height: 26px; }
+.card:hover .card__icone {
+  transform: scale(1.1) rotate(-5deg);
+  background: linear-gradient(135deg, var(--cor-acento), var(--hero-acento));
+  border-color: var(--cor-acento);
+  color: #101828;
+}
+
+.card h3 { margin-bottom: 12px; }
+.card p { font-size: .98rem; }
+
+.lista-check { margin-top: 20px; display: grid; gap: 11px; }
+.lista-check li {
+  position: relative; display: flex; align-items: flex-start; gap: 11px;
+  font-size: .94rem; color: var(--cor-texto-sec);
+}
+.lista-check svg { width: 17px; height: 17px; color: var(--cor-musgo); flex-shrink: 0; margin-top: 5px; }
+
+/* ---------- Sobre ---------- */
+.sobre-wrapper {
+  position: relative; overflow: hidden;
+}
+.sobre__logo-bg {
+  position: absolute; right: -4%; top: 50%; transform: translateY(-50%);
+  width: 380px; height: 380px; object-fit: contain;
+  opacity: 0.05; pointer-events: none; z-index: 0;
+}
+@media (min-width: 768px) {
+  .sobre__logo-bg { width: 480px; height: 480px; right: 0; }
+}
+@media (min-width: 1025px) {
+  .sobre__logo-bg { width: 560px; height: 560px; right: 2%; }
+}
+
+.sobre__texto { max-width: 72ch; position: relative; z-index: 1; }
+.sobre__texto p + p { margin-top: 18px; }
+.sobre__texto p { font-size: 1.05rem; }
+
+.pilares { display: grid; gap: 18px; margin-top: 40px; position: relative; z-index: 1; }
+@media (min-width: 768px) { .pilares { grid-template-columns: repeat(3, 1fr); } }
+.pilar {
+  border-left: 2px solid var(--cor-acento); padding: 4px 0 4px 18px;
+}
+.pilar h3 {
+  font-family: var(--fonte-corpo); font-size: .72rem; font-weight: 700;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--cor-acento-texto); margin-bottom: 8px;
+}
+.pilar p { font-size: .95rem; }
+
+.processo { margin-top: 56px; padding-top: 48px; border-top: 1px solid var(--cor-borda); position: relative; z-index: 1; }
+.processo__titulo { margin-bottom: 32px; }
+.passos { display: grid; gap: 28px; }
+@media (min-width: 768px) { .passos { grid-template-columns: repeat(3, 1fr); gap: 34px; } }
+.passo { position: relative; padding-top: 18px; border-top: 1px solid var(--cor-borda); }
+.passo__num {
+  font-family: var(--fonte-titulo); font-size: 2.1rem; font-weight: 600; line-height: 1;
+  color: var(--cor-acento); opacity: .8; display: block; margin-bottom: 12px;
+}
+.passo h4 { margin-bottom: 8px; font-family: var(--fonte-titulo); font-size: 1.2rem; }
+.passo p { font-size: .95rem; }
+
+/* ---------- Depoimentos marquee ---------- */
+.depo-marquee {
+  overflow: hidden; position: relative;
+  padding-block: 8px;
+}
+.depo-marquee::before,
+.depo-marquee::after {
+  content: ""; position: absolute; top: 0; bottom: 0; width: 120px; z-index: 2; pointer-events: none;
+}
+.depo-marquee::before {
+  left: 0; background: linear-gradient(to right, var(--cor-fundo), transparent);
+}
+.depo-marquee::after {
+  right: 0; background: linear-gradient(to left, var(--cor-fundo), transparent);
+}
+.depo-marquee__track {
+  display: flex;
+  animation: depo-scroll 45s linear infinite;
+  width: max-content;
+}
+.depo-marquee__track:hover { animation-play-state: paused; }
+.depo-marquee__group { display: flex; gap: 20px; padding-right: 20px; }
+
+.depo-card {
+  flex-shrink: 0; width: 320px;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda); border-radius: 12px;
+  padding: 24px 22px;
+  display: flex; flex-direction: column; gap: 12px;
+  box-shadow: 0 2px 12px var(--cor-sombra);
+  transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease;
+}
+.depo-card:hover {
+  border-color: rgba(200, 162, 74, .35);
+  box-shadow: 0 8px 28px var(--cor-sombra);
+  transform: translateY(-4px);
+}
+.depo-card__estrelas {
+  display: flex; gap: 3px; color: var(--cor-acento);
+}
+.depo-card__estrelas svg { width: 15px; height: 15px; }
+.depo-card__texto {
+  font-family: var(--fonte-titulo); font-size: 1.05rem; line-height: 1.6;
+  color: var(--cor-texto); font-style: italic; flex: 1;
+}
+.depo-card__rodape {
+  display: flex; align-items: center; gap: 10px; padding-top: 12px;
+  border-top: 1px solid var(--cor-borda);
+}
+.depo-card__avatar {
+  width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--cor-acento), var(--hero-fundo-2));
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--fonte-titulo); font-size: 1.1rem; font-weight: 700; color: #fff;
+}
+.depo-card__autor { font-size: .84rem; font-weight: 700; color: var(--cor-texto); line-height: 1.2; }
+.depo-card__cidade { font-size: .76rem; color: var(--cor-texto-sec); }
+
+@keyframes depo-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ---------- FAQ ---------- */
+.faq { max-width: 860px; }
+.faq__item { border-bottom: 1px solid var(--cor-borda); }
+.faq__item:first-child { border-top: 1px solid var(--cor-borda); }
+.faq__botao {
+  display: flex; align-items: center; justify-content: space-between; gap: 18px;
+  width: 100%; min-height: 64px; padding: 18px 4px;
+  background: none; border: none; cursor: pointer; text-align: left;
+  font-family: var(--fonte-titulo); font-size: 1.16rem; font-weight: 600; line-height: 1.35;
+  color: var(--cor-texto);
+}
+.faq__botao:hover { color: var(--cor-acento-texto); }
+.faq__icone {
+  flex-shrink: 0; width: 22px; height: 22px; color: var(--cor-acento);
+  transition: transform .32s ease;
+}
+.faq__botao[aria-expanded="true"] .faq__icone { transform: rotate(45deg); }
+.faq__painel {
+  display: grid; grid-template-rows: 0fr; visibility: hidden;
+  transition: grid-template-rows .32s ease, visibility .32s ease;
+}
+.faq__painel--aberto { grid-template-rows: 1fr; visibility: visible; }
+.faq__painel > div { overflow: hidden; }
+.faq__resposta { padding: 0 4px 22px; font-size: .98rem; max-width: 68ch; }
+
+/* ---------- Contato + Localização (seção unificada) ---------- */
+.contato-grade {
+  display: grid; gap: 48px; grid-template-columns: 1fr;
+  align-items: start;
+}
+@media (min-width: 1025px) {
+  .contato-grade { grid-template-columns: 1fr 1.15fr; gap: 64px; }
+}
+
+.contato-info { position: relative; z-index: 1; }
+.contato-cta { margin-top: 28px; }
+
+.contato-canais {
+  display: flex; flex-direction: column; gap: 6px; margin-top: 28px;
+}
+.contato-canal {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 14px 16px; border-radius: 10px;
+  background: transparent;
+  transition: background .2s ease;
+}
+.contato-canal:hover { background: var(--cor-fundo-sec); }
+.contato-canal__icone {
+  width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
+  background: var(--cor-fundo-sec); border: 1px solid var(--cor-borda);
+  display: grid; place-items: center;
+  color: var(--cor-acento-texto);
+}
+.contato-canal__icone svg { width: 18px; height: 18px; }
+.contato-canal__corpo { display: flex; flex-direction: column; justify-content: center; }
+.contato-canal__rotulo {
+  font-size: .68rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--cor-texto-sec); margin-bottom: 3px;
+}
+.contato-canal__valor {
+  font-size: .97rem; font-weight: 500; color: var(--cor-texto); text-decoration: none;
+  transition: color .2s ease;
+}
+a.contato-canal__valor:hover { color: var(--cor-acento-texto); }
+
+.mapa-wrapper {
+  border-radius: 12px; overflow: hidden;
+  border: 1px solid var(--cor-borda);
+  aspect-ratio: 4 / 3.2;
+  position: relative;
+  box-shadow: 0 8px 32px var(--cor-sombra);
+}
+@media (min-width: 1025px) { .mapa-wrapper { aspect-ratio: 4 / 3; } }
+
+.mapa-iframe {
+  width: 100%; height: 100%; border: none; display: block;
+}
+.mapa-placeholder {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 10px;
+  background: var(--cor-fundo-sec); color: var(--cor-texto-sec);
+  text-align: center; padding: 32px;
+}
+.mapa-placeholder svg { width: 36px; height: 36px; color: var(--cor-acento); opacity: .7; }
+.mapa-placeholder p { font-size: .9rem; max-width: 28ch; }
+.mapa-placeholder code {
+  font-size: .78rem; background: var(--cor-borda); padding: 4px 8px;
+  border-radius: 4px; color: var(--cor-acento-texto); font-family: monospace;
+}
+
+/* ---------- WhatsApp flutuante ---------- */
+.whats-float {
+  position: fixed; right: 18px; bottom: 18px; z-index: 90;
+  display: inline-flex; align-items: center; gap: 11px;
+  min-height: 56px; min-width: 56px; padding: 0 20px 0 16px;
+  background: var(--whats); color: #064e28; text-decoration: none;
+  border-radius: 999px; box-shadow: 0 10px 30px rgba(0, 0, 0, .28);
+  font-size: .92rem; font-weight: 700; letter-spacing: .01em;
+  transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease;
+}
+.whats-float:hover { transform: translateY(-3px); background: var(--whats-hover); box-shadow: 0 16px 38px rgba(0, 0, 0, .34); }
+.whats-float svg { width: 26px; height: 26px; flex-shrink: 0; }
+.whats-float__txt { display: none; }
+@media (min-width: 768px) {
+  .whats-float { right: 26px; bottom: 26px; }
+  .whats-float__txt { display: inline; }
+}
+@media (max-width: 767px) { .whats-float { padding: 0; justify-content: center; } }
+
+/* ---------- Rodapé ---------- */
+.rodape { background: var(--hero-fundo); color: var(--hero-texto); padding-block: 56px 30px; }
+.rodape__grade { display: grid; gap: 36px; grid-template-columns: 1fr; }
+@media (min-width: 768px) { .rodape__grade { grid-template-columns: 1.4fr 1fr 1fr; gap: 48px; } }
+.rodape .marca__nome { color: var(--hero-texto); }
+.rodape .marca__sub { color: var(--hero-acento); }
+.rodape .marca__placa { background: transparent; }
+.rodape__desc { color: var(--hero-texto-sec); font-size: .94rem; margin-top: 18px; max-width: 40ch; }
+.rodape__titulo {
+  font-family: var(--fonte-corpo); font-size: .7rem; font-weight: 700;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--hero-acento); margin-bottom: 16px;
+}
+.rodape__lista { display: flex; flex-direction: column; }
+.rodape__lista a, .rodape__lista span {
+  display: inline-flex; align-items: center; min-height: 44px; min-width: 44px;
+  color: var(--hero-texto-sec); text-decoration: none; font-size: .94rem;
+}
+.rodape__lista a:hover { color: var(--hero-acento); }
+.rodape__base {
+  margin-top: 44px; padding-top: 26px; border-top: 1px solid rgba(242, 239, 233, .14);
+  display: flex; flex-direction: column; gap: 16px;
+}
+.rodape__aviso { font-size: .8rem; line-height: 1.65; color: rgba(189, 197, 209, .82); max-width: 84ch; }
+.rodape__copy { font-size: .82rem; color: var(--hero-texto-sec); }
+
+/* ---------- Animações de entrada ---------- */
+.reveal { opacity: 0; transform: translateY(22px); }
+.reveal.visivel { opacity: 1; transform: none; transition: opacity .7s ease, transform .7s cubic-bezier(.22, .61, .36, 1); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important; animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important; scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+  .btn:hover, .card:hover, .whats-float:hover { transform: none; }
+  .depo-marquee__track { animation: none; }
+  .beam { display: none; }
+}
+
+/* ---------- Loading ---------- */
+.carregando {
+  min-height: 60vh; display: grid; place-items: center; gap: 14px;
+  padding: var(--esp-secao) var(--pad-lateral); text-align: center; color: var(--cor-texto-sec);
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Advocacia Almeida",
+  "description": "Escritório de advocacia com atuação em Direito do Trabalho e Direito Previdenciário, atendendo trabalhadores e empresas há 8 anos.",
+  "url": "./",
+  "logo": "assets/MU-logo.png",
+  "image": "assets/MU-consultorio.png",
+  "priceRange": "$$",
+  "areaServed": "BR",
+  "knowsAbout": ["Direito do Trabalho", "Direito Previdenciário"],
+  "serviceType": ["Direito do Trabalho", "Direito Previdenciário"]
+}
+</script>
+</head>
+
+<body>
+<a class="pular-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+<div id="root">
+  <div class="carregando"><p>Carregando Advocacia Almeida…</p></div>
+</div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.25.6/babel.min.js" crossorigin></script>
+
+<script type="text/babel" data-presets="react">
+const { useState, useEffect, useRef, useCallback } = React;
+
+/* ==========================================================================
+   DADOS DE CONTATO — PLACEHOLDERS
+   Substitua os valores abaixo. Para o mapa: gere o iframe embed no Google
+   Maps (Compartilhar > Incorporar mapa) e cole o src no campo MAPA_EMBED_SRC.
+   ========================================================================== */
+const CONTATO = {
+  whatsappNumero: '5511471551599',
+  whatsappExibicao: '(11) 4715-1599',
+  email: 'diegob.almeida88@gmail.com',
+  instagram: '@diego_almeida.adv',
+  instagramUrl: 'https://www.instagram.com/diego_almeida.adv',
+  oab: 'OAB/UF 000.000',
+  endereco: 'Endereço a confirmar em breve',
+  horario: 'Segunda a sexta, das 9h às 18h',
+  ano: new Date().getFullYear(),
+  /* Cole aqui o src do seu iframe do Google Maps */
+  MAPA_EMBED_SRC: '',
+};
+
+const linkWhatsApp = (msg) =>
+  'https://wa.me/' + CONTATO.whatsappNumero + '?text=' + encodeURIComponent(msg);
+
+/* ==========================================================================
+   Textos
+   ========================================================================== */
+const T = {
+  a11y: {
+    menuAbrir: 'Abrir menu de navegação',
+    menuFechar: 'Fechar menu de navegação',
+    temaEscuro: 'Ativar modo escuro',
+    temaClaro: 'Ativar modo claro',
+    navPrincipal: 'Navegação principal',
+    navRodape: 'Navegação do rodapé',
+    whatsFlutuante: 'Falar com a Advocacia Almeida pelo WhatsApp',
+    logoAlt: 'Logotipo da Advocacia Almeida: letra A em azul escuro com balança e espada douradas',
+  },
+  whatsMsg: 'Olá, vim pelo site e gostaria de agendar uma consulta',
+  marca: { nome: 'Almeida', sub: 'Advocacia & Consultoria' },
+  nav: {
+    sobre: 'Sobre', areas: 'Áreas de atuação', depoimentos: 'Depoimentos',
+    faq: 'FAQ', contato: 'Contato', cta: 'Falar no WhatsApp',
+  },
+  hero: {
+    sobrelinha: 'Direito do Trabalho e Direito Previdenciário',
+    titulo: 'Segurança jurídica para o seu presente e seu amanhã.',
+    subtitulo: 'Há 8 anos a Advocacia Almeida atua na defesa técnica de trabalhadores e empresas em questões trabalhistas e previdenciárias — com linguagem clara, processo digital e acompanhamento próximo do início ao fim.',
+    ctaPrimario: 'Falar no WhatsApp',
+    ctaSecundario: 'Ver áreas de atuação',
+    bgAlt: 'Escritório da Advocacia Almeida em tons de azul escuro e dourado',
+  },
+  credenciais: [
+    '8 anos de atuação',
+    'Trabalhista e previdenciário',
+    'Atendimento digital',
+    'Rigor técnico e ética',
+  ],
+  areas: {
+    sobrelinha: 'O que fazemos',
+    titulo: 'Áreas de atuação',
+    intro: 'Duas frentes, uma mesma lógica de trabalho: entender o seu caso a fundo, explicar o que é possível e conduzir com rigor técnico.',
+    cards: [
+      {
+        titulo: 'Direito do Trabalho',
+        texto: 'Defesa técnica em relações de trabalho, para quem contrata e para quem é contratado. Acompanhamos de perto as alterações constantes da legislação trabalhista e traduzimos cada etapa em linguagem que você entende.',
+        itens: [
+          'Verbas rescisórias e acerto de contas',
+          'Reconhecimento de vínculo empregatício',
+          'Horas extras, adicionais e jornada de trabalho',
+          'Assédio, justa causa e rescisão indireta',
+          'Consultoria preventiva e contenciosa para empresas',
+        ],
+      },
+      {
+        titulo: 'Direito Previdenciário',
+        texto: 'Orientação e representação em pedidos, revisões e recursos junto ao INSS. Analisamos o seu histórico contributivo e mostramos, com clareza, quais caminhos existem e o que cada um exige.',
+        itens: [
+          'Aposentadorias e planejamento previdenciário',
+          'Revisão de benefícios já concedidos',
+          'Auxílio por incapacidade temporária e permanente',
+          'BPC/LOAS e pensão por morte',
+          'Recursos administrativos e ações judiciais',
+        ],
+      },
+    ],
+  },
+  sobre: {
+    sobrelinha: 'Quem somos',
+    titulo: 'Sobre a Advocacia Almeida',
+    p1: 'São 8 anos de prática dedicada ao Direito do Trabalho e ao Direito Previdenciário — tempo suficiente para acompanhar de perto as constantes alterações na legislação e transformar essa experiência em defesas técnicas consistentes, tanto para trabalhadores quanto para empresas.',
+    p2: 'Nosso compromisso é simples: informação clara e objetiva, trabalho ágil e digital, e um atendimento que reconhece o que está em jogo. Quem procura o escritório costuma chegar preocupado com a sua relação de trabalho ou com a sua aposentadoria — e deve sair sabendo exatamente onde pisa.',
+    pilares: [
+      { titulo: 'Missão', texto: 'Prestar serviços jurídicos de excelência nas áreas trabalhista e previdenciária, combinando experiência e técnica com um atendimento ágil, seguro e focado no resultado do cliente.' },
+      { titulo: 'Visão', texto: 'Ser o escritório de advocacia referência em eficiência, acolhimento e resultados nas áreas trabalhista e previdenciária.' },
+      { titulo: 'Valores', texto: 'Ética inegociável, transparência com o cliente, empatia no atendimento e rigor técnico.' },
+    ],
+    processoTitulo: 'Como funciona o atendimento',
+    passos: [
+      { titulo: 'Primeiro contato', texto: 'Você envia a sua dúvida pelo WhatsApp e explicamos, sem juridiquês, se e como podemos ajudar.' },
+      { titulo: 'Análise do caso', texto: 'Reunimos documentos e histórico, avaliamos os caminhos possíveis e apresentamos cada um deles com seus prazos e implicações.' },
+      { titulo: 'Condução', texto: 'Definido o caminho, conduzimos o processo com rigor técnico e mantemos você informado a cada etapa.' },
+    ],
+  },
+  depoimentos: {
+    sobrelinha: 'Experiências',
+    titulo: 'O que dizem nossos clientes',
+    intro: 'Resultados reais, palavras reais. Veja o que clientes dizem sobre o nosso trabalho.',
+    cards: [
+      { texto: 'Consegui recuperar dois anos de horas extras que nunca recebi. Tudo foi explicado com clareza e sem juridiquês. Resultado melhor do que esperava.', autor: 'Marcos T.', cidade: 'São Paulo/SP', estrelas: 5 },
+      { texto: 'Minha aposentadoria estava sendo negada há três anos. Em poucos meses o escritório conseguiu reverter a decisão do INSS. Excelente trabalho.', autor: 'Rosângela M.', cidade: 'Campinas/SP', estrelas: 5 },
+      { texto: 'Fui demitida sem receber minhas verbas rescisórias corretamente. O escritório lutou pelo meu direito e recebi tudo o que era meu, com os devidos acréscimos.', autor: 'Fernanda L.', cidade: 'Rio de Janeiro/RJ', estrelas: 5 },
+      { texto: 'Contratei para a empresa e o suporte preventivo evitou uma série de autuações que nem imaginávamos estar expostos. Profissionais sérios e competentes.', autor: 'Eduardo K.', cidade: 'Belo Horizonte/MG', estrelas: 5 },
+      { texto: 'Atendimento 100% digital, prático e sem enrolação. Me explicaram tudo pelo WhatsApp, sempre com agilidade. Recomendo sem hesitar.', autor: 'Patrícia S.', cidade: 'Curitiba/PR', estrelas: 5 },
+      { texto: 'Tinha dúvidas sobre o meu INSS há anos. Me ajudaram a entender toda a situação e ainda conseguiram revisar e aumentar o meu benefício.', autor: 'João B.', cidade: 'Porto Alegre/RS', estrelas: 5 },
+      { texto: 'Empresa séria e transparente nos honorários. Nenhuma promessa exagerada — só resultado real. Ética acima de tudo.', autor: 'Amanda C.', cidade: 'Brasília/DF', estrelas: 5 },
+      { texto: 'Fui por indicação de um colega de trabalho e não me arrependi. O processo foi conduzido com atenção e recebi além do que esperava.', autor: 'Ricardo N.', cidade: 'Florianópolis/SC', estrelas: 5 },
+      { texto: 'Aposentadoria especial que parecia impossível. O escritório fez todo o levantamento do histórico e conseguiu o benefício em tempo recorde.', autor: 'Clarice O.', cidade: 'Fortaleza/CE', estrelas: 5 },
+      { texto: 'Passei anos pagando multa por algo que nunca devi. Eles identificaram o erro, entraram com o recurso certo e tudo foi resolvido.', autor: 'Bruno F.', cidade: 'Manaus/AM', estrelas: 5 },
+    ],
+  },
+  faq: {
+    sobrelinha: 'Dúvidas',
+    titulo: 'Perguntas frequentes',
+    intro: 'As respostas abaixo são informativas e não substituem a análise do seu caso concreto.',
+    itens: [
+      { p: 'Como funciona a primeira conversa com o escritório?', r: 'O primeiro contato é pelo WhatsApp e serve para entender a sua situação. Ouvimos o seu caso, esclarecemos as dúvidas iniciais e indicamos quais documentos são necessários para uma análise adequada.' },
+      { p: 'O escritório atende trabalhadores e empresas?', r: 'Sim. A atuação abrange os dois lados da relação de trabalho: defesa técnica para trabalhadores e consultoria preventiva e contenciosa para empresas.' },
+      { p: 'Preciso ir até o escritório?', r: 'Não necessariamente. O atendimento é digital em todas as etapas em que isso for possível — envio de documentos, reuniões e acompanhamento do processo. O atendimento presencial continua disponível para quem preferir.' },
+      { p: 'Quanto tempo demora um processo trabalhista ou previdenciário?', r: 'O prazo depende do tipo de demanda, da comarca ou da agência do INSS e da complexidade do caso. Por isso não trabalhamos com estimativas genéricas: depois de analisar a sua documentação, explicamos os prazos realistas do seu caso.' },
+      { p: 'Quais documentos devo separar antes do atendimento?', r: 'Para questões trabalhistas: carteira de trabalho, contracheques, contrato e comunicações trocadas com a empresa. Para questões previdenciárias: CNIS, extrato do Meu INSS, laudos médicos e a carta de indeferimento, quando houver. Se faltar algum documento, orientamos como obtê-lo.' },
+      { p: 'Como são definidos os honorários?', r: 'Os honorários seguem os parâmetros da tabela da OAB e são apresentados por escrito, de forma transparente, antes de qualquer contratação. Nenhum valor é cobrado sem que você saiba exatamente o que está contratando.' },
+    ],
+  },
+  contato: {
+    sobrelinha: 'Fale conosco',
+    titulo: 'Entre em contato',
+    texto: 'Atendimento presencial e digital. Envie a sua dúvida pelo WhatsApp e retornamos com orientação clara sobre o que fazer.',
+    ctaPrimario: 'Falar no WhatsApp',
+    canais: [
+      { rotulo: 'WhatsApp', tipo: 'whats' },
+      { rotulo: 'E-mail', tipo: 'email' },
+      { rotulo: 'Instagram', tipo: 'insta' },
+      { rotulo: 'Endereço', tipo: 'local' },
+      { rotulo: 'Horário de atendimento', tipo: 'horario' },
+    ],
+  },
+  rodape: {
+    desc: 'Escritório de advocacia com atuação dedicada ao Direito do Trabalho e ao Direito Previdenciário, para trabalhadores e empresas.',
+    navTitulo: 'Navegação',
+    contatoTitulo: 'Contato',
+    aviso: 'Este site tem caráter meramente informativo, em conformidade com o Código de Ética e Disciplina da OAB e com o Provimento nº 205/2021. O conteúdo aqui apresentado não constitui oferta de serviços, consulta jurídica nem promessa de resultado.',
+    direitos: 'Todos os direitos reservados.',
+  },
+};
+
+/* ==========================================================================
+   Ícones
+   ========================================================================== */
+const svgBase = { fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round', viewBox: '0 0 24 24', 'aria-hidden': 'true', focusable: 'false' };
+
+const IconeBalanca = (p) => (
+  <svg {...svgBase} {...p}>
+    <circle cx="12" cy="3.4" r="1.1" fill="currentColor" stroke="none" />
+    <path d="M12 4.5V20M8.5 20h7M4 7h16M12 5.2 4 7M12 5.2 20 7" />
+    <path d="M1.6 12.2 4 7l2.4 5.2a2.6 2.6 0 0 1-4.8 0Z" />
+    <path d="M17.6 12.2 20 7l2.4 5.2a2.6 2.6 0 0 1-4.8 0Z" />
+  </svg>
+);
+const IconeEscudo = (p) => (
+  <svg {...svgBase} {...p}>
+    <path d="M12 2.8 19 5.5v5.2c0 4.5-2.9 7.8-7 9.5-4.1-1.7-7-5-7-9.5V5.5Z" />
+    <path d="M9 11.6l2.1 2.2L15 9.6" />
+  </svg>
+);
+const IconeEspada = (p) => (
+  <svg {...svgBase} {...p}>
+    <path d="M20.5 3.5h-4L7 13l4 4 9.5-9.5z" />
+    <path d="M6.2 13.8 3.5 16.5 7.5 20.5l2.7-2.7" />
+    <path d="M4.6 18.1 2.4 20.3" />
+  </svg>
+);
+const IconeCheck = (p) => (
+  <svg {...svgBase} {...p}><path d="M4 12.6 9 17.6 20 6.6" /></svg>
+);
+const IconeMais = (p) => (
+  <svg {...svgBase} {...p} strokeWidth="1.6"><path d="M12 5v14M5 12h14" /></svg>
+);
+const IconeLua = (p) => (
+  <svg {...svgBase} {...p}><path d="M20.5 14.3A8.6 8.6 0 0 1 9.7 3.5a8.6 8.6 0 1 0 10.8 10.8Z" /></svg>
+);
+const IconeSol = (p) => (
+  <svg {...svgBase} {...p}>
+    <circle cx="12" cy="12" r="4.2" />
+    <path d="M12 2v2.2M12 19.8V22M2 12h2.2M19.8 12H22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M19.1 4.9l-1.6 1.6M6.5 17.5l-1.6 1.6" />
+  </svg>
+);
+const IconeMenu = (p) => (
+  <svg {...svgBase} {...p} strokeWidth="1.6"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+);
+const IconeFechar = (p) => (
+  <svg {...svgBase} {...p} strokeWidth="1.6"><path d="M6 6l12 12M18 6 6 18" /></svg>
+);
+const IconeLocal = (p) => (
+  <svg {...svgBase} {...p}>
+    <path d="M12 21.5s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" />
+    <circle cx="12" cy="10.3" r="2.6" />
+  </svg>
+);
+const IconeRelogio = (p) => (
+  <svg {...svgBase} {...p}>
+    <circle cx="12" cy="12" r="9" />
+    <path d="M12 7v5.3l3.4 2" />
+  </svg>
+);
+const IconeEmail = (p) => (
+  <svg {...svgBase} {...p}>
+    <rect x="2.8" y="5" width="18.4" height="14" rx="2" />
+    <path d="m3.4 6.5 8.6 6.2 8.6-6.2" />
+  </svg>
+);
+const IconeInsta = (p) => (
+  <svg {...svgBase} {...p}>
+    <rect x="3" y="3" width="18" height="18" rx="5" />
+    <circle cx="12" cy="12" r="4" />
+    <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
+  </svg>
+);
+const IconeWhats = (p) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" {...p}>
+    <path d="M12.05 2C6.55 2 2.08 6.47 2.08 11.97c0 1.76.46 3.48 1.34 5L2 22l5.18-1.36a9.93 9.93 0 0 0 4.87 1.24h.01c5.5 0 9.97-4.47 9.97-9.97 0-2.66-1.04-5.17-2.92-7.05A9.9 9.9 0 0 0 12.05 2Zm0 18.2h-.01a8.28 8.28 0 0 1-4.21-1.15l-.3-.18-3.13.82.83-3.05-.2-.31a8.24 8.24 0 0 1-1.27-4.4c0-4.57 3.72-8.29 8.3-8.29 2.21 0 4.29.86 5.86 2.43a8.24 8.24 0 0 1 2.43 5.87c0 4.57-3.72 8.28-8.3 8.28Zm4.55-6.2c-.25-.13-1.47-.72-1.7-.81-.23-.08-.4-.13-.56.13-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.38-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.41.09-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.13.16 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.15-1.18-.06-.11-.23-.17-.48-.29Z" />
+  </svg>
+);
+const VigaBalanca = ({ className }) => (
+  <svg className={'viga ' + (className || '')} viewBox="0 0 120 12" aria-hidden="true" focusable="false">
+    <line x1="4" y1="6" x2="52" y2="6" stroke="currentColor" strokeWidth="1" />
+    <line x1="68" y1="6" x2="116" y2="6" stroke="currentColor" strokeWidth="1" />
+    <path d="M60 1.5 64.5 6 60 10.5 55.5 6Z" fill="currentColor" />
+    <circle cx="4" cy="6" r="1.6" fill="currentColor" />
+    <circle cx="116" cy="6" r="1.6" fill="currentColor" />
+  </svg>
+);
+
+const IconeEstrela = ({ cheia }) => (
+  <svg viewBox="0 0 24 24" fill={cheia ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+  </svg>
+);
+
+/* ==========================================================================
+   Hooks
+   ========================================================================== */
+function useTheme() {
+  const [theme, setTheme] = useState(
+    () => document.documentElement.getAttribute('data-theme') || 'light'
+  );
+  const changeTheme = useCallback(() => {
+    setTheme((atual) => {
+      const prox = atual === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', prox);
+      try { localStorage.setItem('theme', prox); } catch (e) {}
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', prox === 'dark' ? '#0D1420' : '#16233A');
+      return prox;
+    });
+  }, []);
+  return [theme, changeTheme];
+}
+
+function useReveal() {
+  useEffect(() => {
+    const reduzido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const alvos = document.querySelectorAll('.reveal');
+    if (reduzido || !('IntersectionObserver' in window)) {
+      alvos.forEach((el) => el.classList.add('visivel'));
+      return;
+    }
+    const obs = new IntersectionObserver(
+      (entradas) => {
+        entradas.forEach((e) => {
+          if (e.isIntersecting) { e.target.classList.add('visivel'); obs.unobserve(e.target); }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -60px 0px' }
+    );
+    alvos.forEach((el) => obs.observe(el));
+    return () => obs.disconnect();
+  });
+}
+
+/* ==========================================================================
+   Componentes
+   ========================================================================== */
+function DarkModeToggle({ theme, onChange }) {
+  return (
+    <button
+      type="button"
+      className="toggle-tema"
+      onClick={onChange}
+      aria-label={theme === 'light' ? T.a11y.temaEscuro : T.a11y.temaClaro}
+    >
+      {theme === 'light' ? <IconeLua /> : <IconeSol />}
+    </button>
+  );
+}
+
+function BeamsBackground() {
+  const beams = [
+    { left: '8%',  angle: 22,  dur: 11, delay: 0,   w: 1.5 },
+    { left: '22%', angle: 12,  dur: 16, delay: 2.5, w: 1 },
+    { left: '38%', angle: 18,  dur: 13, delay: 1,   w: 2 },
+    { left: '52%', angle: -14, dur: 18, delay: 3.5, w: 1 },
+    { left: '66%', angle: -22, dur: 12, delay: 0.5, w: 1.5 },
+    { left: '78%', angle: 8,   dur: 15, delay: 4,   w: 1 },
+    { left: '90%', angle: -18, dur: 17, delay: 2,   w: 2 },
+  ];
+  return (
+    <div className="beams" aria-hidden="true">
+      {beams.map((b, i) => (
+        <div key={i} className="beam" style={{
+          left: b.left, width: b.w + 'px',
+          transform: 'rotate(' + b.angle + 'deg)',
+          animationDuration: b.dur + 's', animationDelay: b.delay + 's',
+        }} />
+      ))}
+    </div>
+  );
+}
+
+/* Faixa estática de credenciais */
+function CredenciaisFaixa() {
+  const icones = [IconeBalanca, IconeEspada, IconeRelogio, IconeEscudo];
+  return (
+    <div className="credenciais-faixa">
+      <div className="credenciais-faixa__inner">
+        {T.credenciais.map((item, i) => {
+          const Ic = icones[i % icones.length];
+          return (
+            <span className="credencial-item" key={i}>
+              <Ic />
+              <span>{item}</span>
+            </span>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function Marca({ comSub = true }) {
+  return (
+    <a className="marca" href="#inicio" aria-label="Advocacia Almeida — início">
+      <span className="marca__placa">
+        <img className="marca__img" src="assets/MU-logo.png" alt={T.a11y.logoAlt} loading="lazy" decoding="async" width="34" height="35" />
+      </span>
+      <span className="marca__txt">
+        <span className="marca__nome">{T.marca.nome}</span>
+        {comSub && <span className="marca__sub">{T.marca.sub}</span>}
+      </span>
+    </a>
+  );
+}
+
+function Header({ theme, onThemeChange, whatsHref }) {
+  const [aberto, setAberto] = useState(false);
+  const btnMenuRef = useRef(null);
+  const links = [
+    { id: 'sobre', rotulo: T.nav.sobre },
+    { id: 'areas', rotulo: T.nav.areas },
+    { id: 'depoimentos', rotulo: T.nav.depoimentos },
+    { id: 'faq', rotulo: T.nav.faq },
+    { id: 'contato', rotulo: T.nav.contato },
+  ];
+
+  useEffect(() => {
+    document.body.classList.toggle('menu-aberto', aberto);
+    return () => document.body.classList.remove('menu-aberto');
+  }, [aberto]);
+
+  useEffect(() => {
+    if (!aberto) return;
+    const onKey = (e) => {
+      if (e.key === 'Escape') { setAberto(false); if (btnMenuRef.current) btnMenuRef.current.focus(); }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [aberto]);
+
+  return (
+    <header className="cabecalho">
+      <div className="container cabecalho__inner">
+        <Marca />
+        <nav className="nav-desktop" aria-label={T.a11y.navPrincipal}>
+          {links.map((l) => (
+            <a key={l.id} className="nav-link" href={'#' + l.id}>{l.rotulo}</a>
+          ))}
+        </nav>
+        <div className="controles">
+          <DarkModeToggle theme={theme} onChange={onThemeChange} />
+          <a className="cabecalho__cta" href={whatsHref} target="_blank" rel="noopener noreferrer">
+            <IconeWhats style={{ width: 18, height: 18 }} />
+            <span>{T.nav.cta}</span>
+          </a>
+          <button
+            ref={btnMenuRef}
+            type="button"
+            className="btn-menu"
+            onClick={() => setAberto((v) => !v)}
+            aria-expanded={aberto}
+            aria-controls="menu-mobile"
+            aria-label={aberto ? T.a11y.menuFechar : T.a11y.menuAbrir}
+          >
+            {aberto ? <IconeFechar /> : <IconeMenu />}
+          </button>
+        </div>
+      </div>
+      {aberto && (
+        <div className="menu-mobile" id="menu-mobile">
+          <nav aria-label={T.a11y.navPrincipal}>
+            <ul className="menu-mobile__lista">
+              {links.map((l) => (
+                <li key={l.id}>
+                  <a className="menu-mobile__link" href={'#' + l.id} onClick={() => setAberto(false)}>
+                    {l.rotulo}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <a
+            className="btn--whats btn--bloco menu-mobile__cta"
+            style={{ display: 'flex', justifyContent: 'center' }}
+            href={whatsHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setAberto(false)}
+          >
+            <IconeWhats style={{ width: 20, height: 20 }} />
+            {T.nav.cta}
+          </a>
+        </div>
+      )}
+    </header>
+  );
+}
+
+function Hero({ whatsHref }) {
+  return (
+    <section className="hero" id="inicio" aria-labelledby="hero-titulo">
+      <img className="hero__bg-img" src="assets/MU-consultorio.png" alt={T.hero.bgAlt} loading="eager" decoding="async" width="1536" height="1024" />
+      <BeamsBackground />
+      <div className="container hero__inner reveal">
+        <p className="sobrelinha">{T.hero.sobrelinha}</p>
+        <h1 id="hero-titulo">{T.hero.titulo}</h1>
+        <VigaBalanca className="viga--hero" />
+        <p className="hero__sub">{T.hero.subtitulo}</p>
+        <div className="hero__acoes">
+          <a className="btn btn--ouro" href={whatsHref} target="_blank" rel="noopener noreferrer">
+            <IconeWhats style={{ width: 20, height: 20 }} />
+            {T.hero.ctaPrimario}
+          </a>
+          <a className="btn btn--fantasma-claro" href="#areas">{T.hero.ctaSecundario}</a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Areas() {
+  const icones = [IconeBalanca, IconeEscudo];
+  return (
+    <section className="secao" id="areas" aria-labelledby="areas-titulo">
+      <div className="container">
+        <div className="cabecalho-secao reveal">
+          <p className="sobrelinha">{T.areas.sobrelinha}</p>
+          <h2 id="areas-titulo">{T.areas.titulo}</h2>
+          <VigaBalanca />
+          <p className="intro-secao">{T.areas.intro}</p>
+        </div>
+        <div className="grade grade--2">
+          {T.areas.cards.map((card, i) => {
+            const Icone = icones[i % icones.length];
+            return (
+              <article className="card reveal" key={i} style={{ transitionDelay: i * 0.1 + 's' }}>
+                <span className="card__icone" aria-hidden="true"><Icone /></span>
+                <h3>{card.titulo}</h3>
+                <p>{card.texto}</p>
+                <ul className="lista-check">
+                  {card.itens.map((item, j) => (
+                    <li key={j}><IconeCheck /><span>{item}</span></li>
+                  ))}
+                </ul>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Sobre() {
+  return (
+    <section className="secao secao--alt sobre-wrapper" id="sobre" aria-labelledby="sobre-titulo">
+      <img className="sobre__logo-bg" src="assets/MU-logo.png" alt="" aria-hidden="true" loading="lazy" decoding="async" width="560" height="560" />
+      <div className="container">
+        <div className="reveal" style={{ position: 'relative', zIndex: 1 }}>
+          <p className="sobrelinha">{T.sobre.sobrelinha}</p>
+          <h2 id="sobre-titulo">{T.sobre.titulo}</h2>
+          <VigaBalanca />
+          <div className="sobre__texto" style={{ marginTop: 26 }}>
+            <p>{T.sobre.p1}</p>
+            <p>{T.sobre.p2}</p>
+          </div>
+        </div>
+        <div className="pilares">
+          {T.sobre.pilares.map((p, i) => (
+            <div className="pilar reveal" key={i} style={{ transitionDelay: i * 0.08 + 's' }}>
+              <h3>{p.titulo}</h3>
+              <p>{p.texto}</p>
+            </div>
+          ))}
+        </div>
+        <div className="processo">
+          <h3 className="processo__titulo reveal">{T.sobre.processoTitulo}</h3>
+          <ol className="passos">
+            {T.sobre.passos.map((passo, i) => (
+              <li className="passo reveal" key={i} style={{ transitionDelay: i * 0.1 + 's' }}>
+                <span className="passo__num" aria-hidden="true">{'0' + (i + 1)}</span>
+                <h4>{passo.titulo}</h4>
+                <p>{passo.texto}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* Estrelas de avaliação */
+function Estrelas({ n = 5 }) {
+  return (
+    <div className="depo-card__estrelas" aria-label={n + ' estrelas'}>
+      {Array.from({ length: 5 }, (_, i) => (
+        <IconeEstrela key={i} cheia={i < n} />
+      ))}
+    </div>
+  );
+}
+
+function Depoimentos() {
+  const cards = T.depoimentos.cards;
+
+  const DepoCard = ({ d }) => (
+    <figure className="depo-card">
+      <Estrelas n={d.estrelas} />
+      <blockquote className="depo-card__texto">&ldquo;{d.texto}&rdquo;</blockquote>
+      <figcaption className="depo-card__rodape">
+        <div className="depo-card__avatar" aria-hidden="true">
+          {d.autor.charAt(0)}
+        </div>
+        <div>
+          <p className="depo-card__autor">{d.autor}</p>
+          <p className="depo-card__cidade">{d.cidade}</p>
+        </div>
+      </figcaption>
+    </figure>
+  );
+
+  const Grupo = ({ ariaHidden }) => (
+    <div className="depo-marquee__group" aria-hidden={ariaHidden || undefined}>
+      {cards.map((d, i) => <DepoCard key={i} d={d} />)}
+    </div>
+  );
+
+  return (
+    <section className="secao" id="depoimentos" aria-labelledby="depoimentos-titulo">
+      <div className="container">
+        <div className="cabecalho-secao reveal">
+          <p className="sobrelinha">{T.depoimentos.sobrelinha}</p>
+          <h2 id="depoimentos-titulo">{T.depoimentos.titulo}</h2>
+          <VigaBalanca />
+          <p className="intro-secao">{T.depoimentos.intro}</p>
+        </div>
+      </div>
+      <div className="depo-marquee">
+        <div className="depo-marquee__track">
+          <Grupo />
+          <Grupo ariaHidden="true" />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ItemFaq({ item, indice }) {
+  const [aberto, setAberto] = useState(false);
+  const idBotao = 'faq-btn-' + indice;
+  const idPainel = 'faq-painel-' + indice;
+  return (
+    <div className="faq__item">
+      <h3>
+        <button
+          type="button"
+          id={idBotao}
+          className="faq__botao"
+          aria-expanded={aberto}
+          aria-controls={idPainel}
+          onClick={() => setAberto((v) => !v)}
+        >
+          <span>{item.p}</span>
+          <IconeMais className="faq__icone" />
+        </button>
+      </h3>
+      <div
+        id={idPainel}
+        className={'faq__painel' + (aberto ? ' faq__painel--aberto' : '')}
+        role="region"
+        aria-labelledby={idBotao}
+      >
+        <div>
+          <p className="faq__resposta">{item.r}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Faq() {
+  return (
+    <section className="secao secao--alt" id="faq" aria-labelledby="faq-titulo">
+      <div className="container">
+        <div className="cabecalho-secao reveal">
+          <p className="sobrelinha">{T.faq.sobrelinha}</p>
+          <h2 id="faq-titulo">{T.faq.titulo}</h2>
+          <VigaBalanca />
+          <p className="intro-secao">{T.faq.intro}</p>
+        </div>
+        <div className="faq reveal">
+          {T.faq.itens.map((item, i) => <ItemFaq key={i} item={item} indice={i} />)}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* Contato + Localização unificados */
+function Contato({ whatsHref }) {
+  const canalIcone = { whats: IconeWhats, email: IconeEmail, insta: IconeInsta, local: IconeLocal, horario: IconeRelogio };
+  const canalValor = {
+    whats: CONTATO.whatsappExibicao,
+    email: CONTATO.email,
+    insta: CONTATO.instagram,
+    local: CONTATO.endereco,
+    horario: CONTATO.horario,
+  };
+  const canalHref = {
+    whats: whatsHref,
+    email: 'mailto:' + CONTATO.email,
+    insta: CONTATO.instagramUrl,
+    local: null,
+    horario: null,
+  };
+
+  const temMapa = CONTATO.MAPA_EMBED_SRC && CONTATO.MAPA_EMBED_SRC.length > 0;
+
+  return (
+    <section className="secao" id="contato" aria-labelledby="contato-titulo">
+      <div className="container">
+        <div className="contato-grade reveal">
+          <div className="contato-info">
+            <p className="sobrelinha">{T.contato.sobrelinha}</p>
+            <h2 id="contato-titulo">{T.contato.titulo}</h2>
+            <VigaBalanca />
+            <p style={{ marginTop: 14, fontSize: '1.02rem', maxWidth: '52ch' }}>{T.contato.texto}</p>
+
+            <div className="contato-cta">
+              <a className="btn--whats" href={whatsHref} target="_blank" rel="noopener noreferrer">
+                <IconeWhats style={{ width: 20, height: 20 }} />
+                {T.contato.ctaPrimario}
+              </a>
+            </div>
+
+            <div className="contato-canais">
+              {T.contato.canais.map((canal, i) => {
+                const Ic = canalIcone[canal.tipo];
+                const href = canalHref[canal.tipo];
+                const valor = canalValor[canal.tipo];
+                return (
+                  <div className="contato-canal" key={i}>
+                    <span className="contato-canal__icone"><Ic /></span>
+                    <div className="contato-canal__corpo">
+                      <span className="contato-canal__rotulo">{canal.rotulo}</span>
+                      {href
+                        ? <a className="contato-canal__valor" href={href} target={canal.tipo !== 'email' ? '_blank' : undefined} rel="noopener noreferrer">{valor}</a>
+                        : <span className="contato-canal__valor" style={{ color: 'var(--cor-texto)' }}>{valor}</span>
+                      }
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="mapa-wrapper">
+            {temMapa ? (
+              <iframe
+                className="mapa-iframe"
+                src={CONTATO.MAPA_EMBED_SRC}
+                title="Localização do escritório"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            ) : (
+              <div className="mapa-placeholder">
+                <IconeLocal />
+                <p>Cole o seu embed do Google Maps</p>
+                <p>No arquivo <code>index.html</code>, edite o campo <code>MAPA_EMBED_SRC</code> na constante CONTATO com o link do iframe gerado pelo Google Maps.</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Rodape({ whatsHref }) {
+  const links = [
+    { id: 'sobre', rotulo: T.nav.sobre },
+    { id: 'areas', rotulo: T.nav.areas },
+    { id: 'depoimentos', rotulo: T.nav.depoimentos },
+    { id: 'faq', rotulo: T.nav.faq },
+    { id: 'contato', rotulo: T.nav.contato },
+  ];
+  return (
+    <footer className="rodape">
+      <div className="container">
+        <div className="rodape__grade">
+          <div>
+            <Marca />
+            <p className="rodape__desc">{T.rodape.desc}</p>
+            <p className="rodape__desc" style={{ marginTop: 12, letterSpacing: '.08em', fontSize: '.82rem' }}>
+              {CONTATO.oab}
+            </p>
+          </div>
+          <nav aria-label={T.a11y.navRodape}>
+            <p className="rodape__titulo">{T.rodape.navTitulo}</p>
+            <ul className="rodape__lista">
+              {links.map((l) => (
+                <li key={l.id}><a href={'#' + l.id}>{l.rotulo}</a></li>
+              ))}
+            </ul>
+          </nav>
+          <div>
+            <p className="rodape__titulo">{T.rodape.contatoTitulo}</p>
+            <ul className="rodape__lista">
+              <li><a href={whatsHref} target="_blank" rel="noopener noreferrer">{CONTATO.whatsappExibicao}</a></li>
+              <li><a href={'mailto:' + CONTATO.email}>{CONTATO.email}</a></li>
+              <li><a href={CONTATO.instagramUrl} target="_blank" rel="noopener noreferrer">{CONTATO.instagram}</a></li>
+              <li><span>{CONTATO.horario}</span></li>
+            </ul>
+          </div>
+        </div>
+        <div className="rodape__base">
+          <p className="rodape__aviso">{T.rodape.aviso}</p>
+          <p className="rodape__copy">&copy; {CONTATO.ano} Advocacia Almeida. {T.rodape.direitos}</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function WhatsFlutuante({ whatsHref }) {
+  return (
+    <a className="whats-float" href={whatsHref} target="_blank" rel="noopener noreferrer" aria-label={T.a11y.whatsFlutuante}>
+      <IconeWhats />
+      <span className="whats-float__txt">WhatsApp</span>
+    </a>
+  );
+}
+
+/* ==========================================================================
+   App
+   ========================================================================== */
+function App() {
+  const [theme, changeTheme] = useTheme();
+  const whatsHref = linkWhatsApp(T.whatsMsg);
+  useReveal();
+
+  return (
+    <>
+      <Header theme={theme} onThemeChange={changeTheme} whatsHref={whatsHref} />
+      <main id="conteudo">
+        <Hero whatsHref={whatsHref} />
+        <CredenciaisFaixa />
+        <Areas />
+        <Sobre />
+        <Depoimentos />
+        <Faq />
+        <Contato whatsHref={whatsHref} />
+      </main>
+      <Rodape whatsHref={whatsHref} />
+      <WhatsFlutuante whatsHref={whatsHref} />
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

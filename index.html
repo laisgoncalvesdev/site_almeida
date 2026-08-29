@@ -718,6 +718,81 @@ a.contato-canal__valor:hover { color: var(--cor-acento-texto); }
 .rodape__aviso { font-size: .8rem; line-height: 1.65; color: rgba(189, 197, 209, .82); max-width: 84ch; }
 .rodape__copy { font-size: .82rem; color: var(--hero-texto-sec); }
 
+/* ---------- Badge de especialidade ---------- */
+.badge-especialidade {
+  display: inline-flex; align-items: center; gap: 7px;
+  margin-top: 20px;
+  padding: 7px 16px;
+  background: rgba(200, 162, 74, 0.11);
+  border: 1px solid rgba(200, 162, 74, 0.32);
+  border-radius: 999px;
+  font-family: var(--fonte-corpo);
+  font-size: .76rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--cor-acento-texto);
+}
+.badge-especialidade svg { width: 13px; height: 13px; color: var(--cor-acento); flex-shrink: 0; fill: var(--cor-acento); stroke: none; }
+
+/* ---------- Quiz / Consulta ---------- */
+.quiz-wrapper {
+  max-width: 700px;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: 14px;
+  padding: 36px 30px;
+  box-shadow: 0 6px 32px var(--cor-sombra);
+}
+@media (min-width: 768px) { .quiz-wrapper { padding: 44px 44px; } }
+
+.quiz-progresso { display: flex; gap: 7px; margin-bottom: 32px; }
+.quiz-progresso__passo {
+  height: 3px; flex: 1; border-radius: 999px;
+  background: var(--cor-fundo-sec);
+  transition: background .35s ease;
+}
+.quiz-progresso__passo--ativo { background: var(--cor-acento); }
+
+.quiz-titulo { font-family: var(--fonte-titulo); font-size: 1.35rem; font-weight: 600; color: var(--cor-texto); line-height: 1.25; margin-bottom: 6px; }
+.quiz-sub { font-size: .92rem; color: var(--cor-texto-sec); margin-bottom: 22px; }
+
+.quiz-opcoes { display: grid; gap: 11px; margin-top: 4px; }
+.quiz-opcoes--2 { grid-template-columns: 1fr 1fr; }
+@media (max-width: 500px) { .quiz-opcoes--2 { grid-template-columns: 1fr; } }
+
+.quiz-opcao {
+  display: flex; align-items: center; gap: 13px;
+  padding: 15px 17px; border-radius: 10px;
+  border: 1.5px solid var(--cor-borda);
+  background: var(--cor-fundo);
+  cursor: pointer; text-align: left;
+  font-family: var(--fonte-corpo); font-size: .94rem; font-weight: 500; color: var(--cor-texto);
+  transition: border-color .22s ease, background .22s ease, transform .22s ease, box-shadow .22s ease;
+}
+.quiz-opcao:hover { border-color: var(--cor-acento); background: var(--cor-superficie); transform: translateY(-2px); box-shadow: 0 6px 18px var(--cor-sombra); }
+.quiz-opcao--selecionado { border-color: var(--cor-acento); background: rgba(200, 162, 74, 0.09); }
+.quiz-opcao__icone { width: 36px; height: 36px; flex-shrink: 0; border-radius: 8px; display: grid; place-items: center; background: var(--cor-fundo-sec); color: var(--cor-acento-texto); }
+.quiz-opcao__icone svg { width: 18px; height: 18px; }
+
+.quiz-label { display: block; font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--cor-texto-sec); margin-top: 20px; margin-bottom: 8px; }
+.quiz-input, .quiz-textarea {
+  width: 100%; border: 1.5px solid var(--cor-borda); border-radius: 8px;
+  background: var(--cor-fundo); color: var(--cor-texto);
+  font-family: var(--fonte-corpo); font-size: .95rem; line-height: 1.6;
+  padding: 13px 15px; transition: border-color .2s ease;
+}
+.quiz-input:focus, .quiz-textarea:focus { outline: none; border-color: var(--cor-acento); }
+.quiz-textarea { min-height: 110px; resize: vertical; }
+
+.quiz-acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 26px; }
+.quiz-volta {
+  background: none; border: none; cursor: pointer;
+  color: var(--cor-texto-sec); font-family: var(--fonte-corpo); font-size: .9rem; font-weight: 500;
+  padding: 0; text-decoration: underline; transition: color .2s ease;
+}
+.quiz-volta:hover { color: var(--cor-texto); }
+
+.quiz-nota { font-size: .78rem; color: var(--cor-texto-sec); margin-top: 16px; }
+.quiz-nota svg { display: inline; width: 13px; height: 13px; vertical-align: middle; margin-right: 4px; }
+
 /* ---------- Animações de entrada ---------- */
 .reveal { opacity: 0; transform: translateY(22px); }
 .reveal.visivel { opacity: 1; transform: none; transition: opacity .7s ease, transform .7s cubic-bezier(.22, .61, .36, 1); }
@@ -783,7 +858,7 @@ const CONTATO = {
   email: 'diegob.almeida88@gmail.com',
   instagram: '@diego_almeida.adv',
   instagramUrl: 'https://www.instagram.com/diego_almeida.adv',
-  oab: 'OAB/UF 000.000',
+  oab: 'OAB/SP 374.758',
   endereco: 'Endereço a confirmar em breve',
   horario: 'Segunda a sexta, das 9h às 18h',
   ano: new Date().getFullYear(),
@@ -812,7 +887,7 @@ const T = {
   marca: { nome: 'Almeida', sub: 'Advocacia & Consultoria' },
   nav: {
     sobre: 'Sobre', areas: 'Áreas de atuação', depoimentos: 'Depoimentos',
-    faq: 'FAQ', contato: 'Contato', cta: 'Falar no WhatsApp',
+    faq: 'FAQ', consulta: 'Consulta gratuita', contato: 'Contato', cta: 'Falar no WhatsApp',
   },
   hero: {
     sobrelinha: 'Direito do Trabalho e Direito Previdenciário',
@@ -1141,6 +1216,7 @@ function Header({ theme, onThemeChange, whatsHref }) {
     { id: 'areas', rotulo: T.nav.areas },
     { id: 'depoimentos', rotulo: T.nav.depoimentos },
     { id: 'faq', rotulo: T.nav.faq },
+    { id: 'consulta', rotulo: T.nav.consulta },
     { id: 'contato', rotulo: T.nav.contato },
   ];
 
@@ -1280,6 +1356,10 @@ function Sobre() {
           <p className="sobrelinha">{T.sobre.sobrelinha}</p>
           <h2 id="sobre-titulo">{T.sobre.titulo}</h2>
           <VigaBalanca />
+          <span className="badge-especialidade">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Especialista em Direito do Trabalho
+          </span>
           <div className="sobre__texto" style={{ marginTop: 26 }}>
             <p>{T.sobre.p1}</p>
             <p>{T.sobre.p2}</p>
@@ -1505,6 +1585,7 @@ function Rodape({ whatsHref }) {
     { id: 'areas', rotulo: T.nav.areas },
     { id: 'depoimentos', rotulo: T.nav.depoimentos },
     { id: 'faq', rotulo: T.nav.faq },
+    { id: 'consulta', rotulo: T.nav.consulta },
     { id: 'contato', rotulo: T.nav.contato },
   ];
   return (
@@ -1555,6 +1636,171 @@ function WhatsFlutuante({ whatsHref }) {
 }
 
 /* ==========================================================================
+   Quiz de consulta
+   ========================================================================== */
+const QUIZ_DADOS = {
+  trabalhista: {
+    icone: IconeBalanca,
+    label: 'Direito do Trabalho',
+    situacoes: [
+      'Fui demitido(a) e tenho dúvidas sobre meus direitos',
+      'Não recebi horas extras ou outros valores devidos',
+      'Questiono o tipo de demissão (justa causa / rescisão indireta)',
+      'Assédio moral, sexual ou ambiente de trabalho hostil',
+      'Reconhecimento de vínculo empregatício',
+      'Sou empresa e preciso de consultoria preventiva ou contenciosa',
+      'Outro',
+    ],
+  },
+  previdenciario: {
+    icone: IconeEscudo,
+    label: 'Direito Previdenciário',
+    situacoes: [
+      'Aposentadoria negada ou em análise no INSS',
+      'Quero revisar um benefício já concedido',
+      'Auxílio por doença ou incapacidade permanente',
+      'Pensão por morte ou BPC/LOAS',
+      'Planejamento previdenciário (quero me planejar)',
+      'Recurso contra decisão administrativa',
+      'Outro',
+    ],
+  },
+};
+
+function Quiz({ whatsHref }) {
+  const [passo, setPasso] = useState(1);
+  const [area, setArea] = useState(null);
+  const [situacao, setSituacao] = useState(null);
+  const [descricao, setDescricao] = useState('');
+  const [nome, setNome] = useState('');
+
+  const totalPassos = 3;
+
+  function handleArea(chave) {
+    setArea(chave);
+    setSituacao(null);
+    setPasso(2);
+  }
+
+  function handleSituacao(s) {
+    setSituacao(s);
+    setPasso(3);
+  }
+
+  function handleEnviar() {
+    const dadosArea = QUIZ_DADOS[area];
+    const linhas = [
+      '*Consulta — Advocacia Almeida*',
+      '',
+      '🏛️ *Área:* ' + dadosArea.label,
+      '📋 *Situação:* ' + situacao,
+      descricao.trim() ? '📝 *Detalhes:* ' + descricao.trim() : null,
+      nome.trim() ? '👤 *Nome:* ' + nome.trim() : null,
+    ].filter(Boolean);
+    const msg = linhas.join('\n');
+    window.open('https://wa.me/' + CONTATO.whatsappNumero + '?text=' + encodeURIComponent(msg), '_blank', 'noopener,noreferrer');
+  }
+
+  const Progresso = () => (
+    <div className="quiz-progresso" aria-label={'Passo ' + passo + ' de ' + totalPassos}>
+      {Array.from({ length: totalPassos }, (_, i) => (
+        <div key={i} className={'quiz-progresso__passo' + (i < passo ? ' quiz-progresso__passo--ativo' : '')} />
+      ))}
+    </div>
+  );
+
+  return (
+    <section className="secao secao--alt" id="consulta" aria-labelledby="consulta-titulo">
+      <div className="container">
+        <div className="cabecalho-secao reveal">
+          <p className="sobrelinha">Consulta gratuita</p>
+          <h2 id="consulta-titulo">Descreva seu caso</h2>
+          <VigaBalanca />
+          <p className="intro-secao">Responda três perguntas rápidas e enviaremos uma mensagem organizada direto para o WhatsApp do escritório — sem custo e sem compromisso.</p>
+        </div>
+
+        <div className="quiz-wrapper reveal">
+          <Progresso />
+
+          {passo === 1 && (
+            <>
+              <p className="quiz-titulo">Qual é a área do seu caso?</p>
+              <p className="quiz-sub">Selecione a que melhor descreve a sua situação.</p>
+              <div className="quiz-opcoes quiz-opcoes--2">
+                {Object.entries(QUIZ_DADOS).map(([chave, d]) => {
+                  const Ic = d.icone;
+                  return (
+                    <button key={chave} type="button" className={'quiz-opcao' + (area === chave ? ' quiz-opcao--selecionado' : '')} onClick={() => handleArea(chave)}>
+                      <span className="quiz-opcao__icone"><Ic /></span>
+                      <span>{d.label}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </>
+          )}
+
+          {passo === 2 && area && (
+            <>
+              <p className="quiz-titulo">Qual é a sua situação?</p>
+              <p className="quiz-sub">Escolha a opção mais próxima do seu caso.</p>
+              <div className="quiz-opcoes">
+                {QUIZ_DADOS[area].situacoes.map((s) => (
+                  <button key={s} type="button" className={'quiz-opcao' + (situacao === s ? ' quiz-opcao--selecionado' : '')} onClick={() => handleSituacao(s)}>
+                    <span className="quiz-opcao__icone"><IconeCheck /></span>
+                    <span>{s}</span>
+                  </button>
+                ))}
+              </div>
+              <div className="quiz-acoes">
+                <button type="button" className="quiz-volta" onClick={() => setPasso(1)}>← Voltar</button>
+              </div>
+            </>
+          )}
+
+          {passo === 3 && (
+            <>
+              <p className="quiz-titulo">Mais algum detalhe?</p>
+              <p className="quiz-sub">Opcional — mas ajuda o Dr. Diego a entender melhor o seu caso antes do primeiro contato.</p>
+              <label className="quiz-label" htmlFor="quiz-descricao">Conte um pouco mais (opcional)</label>
+              <textarea
+                id="quiz-descricao"
+                className="quiz-textarea"
+                placeholder="Ex.: fui demitido há 15 dias e não recebi o FGTS…"
+                value={descricao}
+                onChange={(e) => setDescricao(e.target.value)}
+                maxLength={800}
+              />
+              <label className="quiz-label" htmlFor="quiz-nome">Seu nome (opcional)</label>
+              <input
+                id="quiz-nome"
+                type="text"
+                className="quiz-input"
+                placeholder="Como prefere ser chamado(a)?"
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
+                maxLength={80}
+              />
+              <div className="quiz-acoes">
+                <button type="button" className="btn--whats" onClick={handleEnviar}>
+                  <IconeWhats style={{ width: 20, height: 20 }} />
+                  Enviar pelo WhatsApp
+                </button>
+                <button type="button" className="quiz-volta" onClick={() => setPasso(2)}>← Voltar</button>
+              </div>
+              <p className="quiz-nota">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg>
+                Ao clicar em "Enviar", o WhatsApp abrirá com uma mensagem já formatada. Você confirma o envio pelo próprio aplicativo.
+              </p>
+            </>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ==========================================================================
    App
    ========================================================================== */
 function App() {
@@ -1572,6 +1818,7 @@ function App() {
         <Sobre />
         <Depoimentos />
         <Faq />
+        <Quiz whatsHref={whatsHref} />
         <Contato whatsHref={whatsHref} />
       </main>
       <Rodape whatsHref={whatsHref} />

@@ -470,6 +470,16 @@ a { color: inherit; }
 .card h3 { margin-bottom: 12px; }
 .card p { font-size: .98rem; }
 
+.card__especialidade {
+  display: inline-flex; align-items: center; gap: 5px;
+  margin-bottom: 14px;
+  padding: 5px 13px;
+  background: rgba(200,162,74,.12); border: 1px solid rgba(200,162,74,.30); border-radius: 999px;
+  font-family: var(--fonte-corpo); font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--cor-acento-texto);
+}
+.card__especialidade svg { width: 11px; height: 11px; fill: var(--cor-acento); flex-shrink: 0; }
+
 .lista-check { margin-top: 20px; display: grid; gap: 11px; }
 .lista-check li {
   position: relative; display: flex; align-items: flex-start; gap: 11px;
@@ -759,7 +769,7 @@ a.contato-canal__valor:hover { color: var(--cor-acento-texto); }
 @media (max-width: 500px) { .quiz-opcoes--2 { grid-template-columns: 1fr; } }
 
 .quiz-opcao {
-  display: flex; align-items: center; gap: 13px;
+  display: flex; align-items: flex-start; gap: 13px;
   padding: 15px 17px; border-radius: 10px;
   border: 1.5px solid var(--cor-borda);
   background: var(--cor-fundo);
@@ -769,8 +779,20 @@ a.contato-canal__valor:hover { color: var(--cor-acento-texto); }
 }
 .quiz-opcao:hover { border-color: var(--cor-acento); background: var(--cor-superficie); transform: translateY(-2px); box-shadow: 0 6px 18px var(--cor-sombra); }
 .quiz-opcao--selecionado { border-color: var(--cor-acento); background: rgba(200, 162, 74, 0.09); }
-.quiz-opcao__icone { width: 36px; height: 36px; flex-shrink: 0; border-radius: 8px; display: grid; place-items: center; background: var(--cor-fundo-sec); color: var(--cor-acento-texto); }
+.quiz-opcao__icone { width: 36px; height: 36px; flex-shrink: 0; border-radius: 8px; display: grid; place-items: center; background: var(--cor-fundo-sec); color: var(--cor-acento-texto); margin-top: 2px; }
 .quiz-opcao__icone svg { width: 18px; height: 18px; }
+.quiz-opcao__corpo { display: flex; flex-direction: column; gap: 3px; flex: 1; }
+.quiz-opcao__titulo { font-size: .95rem; font-weight: 600; line-height: 1.2; }
+.quiz-opcao__desc { font-size: .8rem; color: var(--cor-texto-sec); line-height: 1.45; font-weight: 400; }
+.quiz-opcao__badge {
+  display: inline-flex; align-items: center; gap: 4px; align-self: flex-start;
+  white-space: nowrap;
+  margin-top: 5px; padding: 3px 10px;
+  background: rgba(200,162,74,.14); border: 1px solid rgba(200,162,74,.32); border-radius: 999px;
+  font-size: .68rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--cor-acento-texto);
+}
+.quiz-opcao__badge svg { width: 10px; height: 10px; fill: var(--cor-acento); flex-shrink: 0; }
 
 .quiz-label { display: block; font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--cor-texto-sec); margin-top: 20px; margin-bottom: 8px; }
 .quiz-input, .quiz-textarea {
@@ -1331,6 +1353,12 @@ function Areas() {
             return (
               <article className="card reveal" key={i} style={{ transitionDelay: i * 0.1 + 's' }}>
                 <span className="card__icone" aria-hidden="true"><Icone /></span>
+                {i === 0 && (
+                  <span className="card__especialidade">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    Especialidade principal
+                  </span>
+                )}
                 <h3>{card.titulo}</h3>
                 <p>{card.texto}</p>
                 <ul className="lista-check">
@@ -1642,6 +1670,8 @@ const QUIZ_DADOS = {
   trabalhista: {
     icone: IconeBalanca,
     label: 'Direito do Trabalho',
+    desc: 'Demissão, horas extras não pagas, assédio, reconhecimento de vínculo — tudo que envolve a relação entre empregado e empregador.',
+    especialidade: true,
     situacoes: [
       'Fui demitido(a) e tenho dúvidas sobre meus direitos',
       'Não recebi horas extras ou outros valores devidos',
@@ -1655,6 +1685,8 @@ const QUIZ_DADOS = {
   previdenciario: {
     icone: IconeEscudo,
     label: 'Direito Previdenciário',
+    desc: 'Aposentadoria, auxílio-doença, revisão de benefícios e recursos junto ao INSS — questões sobre o que você recebe ou vai receber do governo.',
+    especialidade: false,
     situacoes: [
       'Aposentadoria negada ou em análise no INSS',
       'Quero revisar um benefício já concedido',
@@ -1732,7 +1764,16 @@ function Quiz({ whatsHref }) {
                   return (
                     <button key={chave} type="button" className={'quiz-opcao' + (area === chave ? ' quiz-opcao--selecionado' : '')} onClick={() => handleArea(chave)}>
                       <span className="quiz-opcao__icone"><Ic /></span>
-                      <span>{d.label}</span>
+                      <span className="quiz-opcao__corpo">
+                        <span className="quiz-opcao__titulo">{d.label}</span>
+                        <span className="quiz-opcao__desc">{d.desc}</span>
+                        {d.especialidade && (
+                          <span className="quiz-opcao__badge">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            Especialidade principal
+                          </span>
+                        )}
+                      </span>
                     </button>
                   );
                 })}

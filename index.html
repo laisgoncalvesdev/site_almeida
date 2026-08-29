@@ -744,14 +744,14 @@ a.contato-canal__valor:hover { color: var(--cor-acento-texto); }
 
 /* ---------- Quiz / Consulta ---------- */
 .quiz-wrapper {
-  max-width: 700px;
+  width: 100%;
   background: var(--cor-superficie);
   border: 1px solid var(--cor-borda);
   border-radius: 14px;
   padding: 36px 30px;
   box-shadow: 0 6px 32px var(--cor-sombra);
 }
-@media (min-width: 768px) { .quiz-wrapper { padding: 44px 44px; } }
+@media (min-width: 768px) { .quiz-wrapper { padding: 44px 48px; } }
 
 .quiz-progresso { display: flex; gap: 7px; margin-bottom: 32px; }
 .quiz-progresso__passo {
@@ -766,7 +766,7 @@ a.contato-canal__valor:hover { color: var(--cor-acento-texto); }
 
 .quiz-opcoes { display: grid; gap: 14px; margin-top: 8px; }
 .quiz-opcoes--2 { grid-template-columns: 1fr; }
-@media (min-width: 640px) { .quiz-opcoes--2 { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 560px) { .quiz-opcoes--2 { grid-template-columns: 1fr 1fr; } }
 
 .quiz-opcao {
   display: flex; align-items: flex-start; gap: 16px;

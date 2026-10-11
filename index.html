@@ -1215,11 +1215,12 @@ function CredenciaisFaixa() {
   );
 }
 
-function Marca({ comSub = true }) {
+function Marca({ comSub = true, theme = 'light' }) {
+  const logoSrc = theme === 'dark' ? 'assets/MU-logo.png' : 'assets/MU-logo-light.png';
   return (
     <a className="marca" href="#inicio" aria-label="Advocacia Almeida — início">
       <span className="marca__placa">
-        <img className="marca__img" src="assets/MU-logo.png" alt={T.a11y.logoAlt} loading="lazy" decoding="async" width="34" height="35" />
+        <img className="marca__img" src={logoSrc} alt={T.a11y.logoAlt} loading="lazy" decoding="async" width="34" height="35" />
       </span>
       <span className="marca__txt">
         <span className="marca__nome">{T.marca.nome}</span>
@@ -1258,7 +1259,7 @@ function Header({ theme, onThemeChange, whatsHref }) {
   return (
     <header className="cabecalho">
       <div className="container cabecalho__inner">
-        <Marca />
+        <Marca theme={theme} />
         <nav className="nav-desktop" aria-label={T.a11y.navPrincipal}>
           {links.map((l) => (
             <a key={l.id} className="nav-link" href={'#' + l.id}>{l.rotulo}</a>
@@ -1374,10 +1375,11 @@ function Areas() {
   );
 }
 
-function Sobre() {
+function Sobre({ theme = 'light' }) {
+  const logoSrc = theme === 'dark' ? 'assets/MU-logo.png' : 'assets/MU-logo-light.png';
   return (
     <section className="secao secao--alt sobre-wrapper" id="sobre" aria-labelledby="sobre-titulo">
-      <img className="sobre__logo-bg" src="assets/MU-logo.png" alt="" aria-hidden="true" loading="lazy" decoding="async" width="560" height="560" />
+      <img className="sobre__logo-bg" src={logoSrc} alt="" aria-hidden="true" loading="lazy" decoding="async" width="560" height="560" />
       <div className="container">
         <div className="reveal" style={{ position: 'relative', zIndex: 1 }}>
           <p className="sobrelinha">{T.sobre.sobrelinha}</p>
@@ -1855,7 +1857,7 @@ function App() {
         <Hero whatsHref={whatsHref} />
         <CredenciaisFaixa />
         <Areas />
-        <Sobre />
+        <Sobre theme={theme} />
         <Depoimentos />
         <Faq />
         <Quiz whatsHref={whatsHref} />
